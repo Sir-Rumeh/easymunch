@@ -19,34 +19,34 @@ import VendorMenu from "./components/vendor/routes/VendorMenu";
 //import Footer from "./components/Footer";
 
 function App() {
-  //const authState = useSelector((state) => state.auth.auth);
+	//const authState = useSelector((state) => state.auth.auth);
 
-  const dispatch = useDispatch();
+	const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getAuth());
-  }, [dispatch]);
+	useEffect(() => {
+		dispatch(getAuth());
+	}, [dispatch]);
 
-  return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/resturants" element={<Resturants />} />
-        <Route path="/in-resturant" element={<InResturant />} />
-        <Route path="/vendor" element={<BecomeVendor />} />
-        <Route path="/user-dashboard" element={<UserDashboard />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/vendor-dashboard" element={<Vendor />}>
-          <Route index element={<VendorOrders />} />
-          <Route path="menu" element={<VendorMenu />} />
-        </Route>
-      </Routes>
-      {/*<Footer />*/}
-    </BrowserRouter>
-  );
+	return (
+		<BrowserRouter>
+			<Header />
+			<Routes>
+				<Route path="/" element={<Index />} />
+				<Route path="/login" element={<Login />} />
+				<Route path="/register" element={<Register />} />
+				<Route path="/resturants" element={<Resturants />} />
+				<Route path="/in-resturant" element={<InResturant />} />
+				<Route path="/vendor" element={<BecomeVendor />} />
+				<Route path="/user-dashboard" element={<UserDashboard />} />
+				<Route path="/checkout" element={<Checkout />} />
+				<Route path="/vendor-dashboard" element={<Vendor />}>
+					<Route index element={<VendorOrders />} />
+					<Route path="menu" element={<VendorMenu />} />
+				</Route>
+			</Routes>
+			{/* <Footer /> */}
+		</BrowserRouter>
+	);
 }
 
 export default App;
